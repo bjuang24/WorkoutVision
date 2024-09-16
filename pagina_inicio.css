@@ -1,0 +1,256 @@
+/* Reset de estilos para uniformidad en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #0e0e0e;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.btn-acceder {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-acceder:hover {
+    background-color: #d10000;
+}
+
+/* Sección Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url('ruta/de/imagen-hero.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #ddd;
+}
+
+.btn-hero {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn-hero:hover {
+    background-color: #d10000;
+}
+
+/* Sección Ejercicios Destacados */
+.ejercicios-destacados {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.ejercicios-destacados h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ejercicios-destacados p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.ejercicios-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ejercicio img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.ejercicio p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Secciones de contenido */
+.seccion-masa-muscular, .seccion-perder-peso, .seccion-flexibilidad {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    margin-bottom: 40px;
+}
+
+.seccion-masa-muscular h2, .seccion-perder-peso h2, .seccion-flexibilidad h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.seccion-masa-muscular p, .seccion-perder-peso p, .seccion-flexibilidad p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 600px;
+}
+
+.seccion-masa-muscular img, .seccion-perder-peso img, .seccion-flexibilidad img {
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 40px;
+    background-color: #0e0e0e;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff0000;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .seccion-masa-muscular, .seccion-perder-peso, .seccion-flexibilidad {
+        flex-direction: column;
+    }
+
+    .seccion-masa-muscular img, .seccion-perder-peso img, .seccion-flexibilidad img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ejercicios-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-hero {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
