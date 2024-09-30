@@ -1,0 +1,141 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #0e0e0e;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.btn-perfil {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-perfil:hover {
+    background-color: #d10000;
+}
+
+/* Contenedor del Ejercicio */
+.ejercicio-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: url('ruta/de/Ejercicio_PressBnaca.png') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contenido-ejercicio {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contenido-ejercicio h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contenido-ejercicio p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.contenido-ejercicio h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.btn-video {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-video:hover {
+    background-color: #d10000;
+}
+
+/* Imágenes del ejercicio */
+.imagenes-ejercicio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imagenes-ejercicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-links a:hover {
+    filter: brightness(1.2);
+}

@@ -1,4 +1,4 @@
-/* Reset de estilos para uniformidad en todos los navegadores */
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -34,18 +34,14 @@ header {
 nav {
     flex-grow: 1;
     display: flex;
-    justify-content: center; /* Centramos los enlaces de navegación */
-    align-items: center; /* Aseguramos que los enlaces estén alineados verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Espacio entre los enlaces */
-}
-
-nav ul li {
-    display: inline;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -61,8 +57,7 @@ nav ul li a:hover {
     color: #ff0000;
 }
 
-/* Botón "Acceder" */
-.btn-acceder {
+.btn-perfil {
     background-color: #ff0000;
     color: #fff;
     padding: 8px 15px;
@@ -73,7 +68,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-.btn-acceder:hover {
+.btn-perfil:hover {
     background-color: #d10000;
 }
 
@@ -82,21 +77,20 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Aseguramos que cubra toda la altura de la ventana */
+    height: 100vh;
     background: url('Imagenes/fondoinicio.jpg') no-repeat center center;
-    background-size: cover; /* Aseguramos que la imagen cubra toda la sección */
+    background-size: cover;
     position: relative;
     text-align: center;
     color: #fff;
-    overflow: hidden; /* Para evitar cualquier superposición no deseada */
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejorar la legibilidad */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 15px;
-    max-width: 600px; /* Limitamos el ancho del contenido */
-    text-align: center;
+    max-width: 600px;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -121,7 +115,7 @@ nav ul li a:hover {
     background-color: #d10000;
 }
 
-/* Sección Ejercicios Destacados */
+/* Sección Ejercicios Destacados con carrusel */
 .ejercicios-destacados {
     padding: 60px 40px;
     text-align: center;
@@ -140,14 +134,17 @@ nav ul li a:hover {
 
 .ejercicios-carousel {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
+    overflow-x: scroll;
+}
+
+.ejercicio {
+    min-width: 200px;
 }
 
 .ejercicio img {
-    width: 250px;
-    height: 150px;
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -159,39 +156,38 @@ nav ul li a:hover {
 }
 
 /* Secciones de contenido */
-.seccion-masa-muscular, 
-.seccion-perder-peso, 
+.seccion-masa-muscular,
+.seccion-perder-peso,
 .seccion-flexibilidad {
-    padding: 60px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 60px 40px;
     background-color: #1a1a1a;
-    margin-bottom: 40px;
 }
 
-.seccion-masa-muscular h2, 
-.seccion-perder-peso h2, 
-.seccion-flexibilidad h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.seccion-masa-muscular p, 
-.seccion-perder-peso p, 
-.seccion-flexibilidad p {
-    font-size: 1.1rem;
-    color: #ccc;
-    max-width: 600px;
-}
-
-.seccion-masa-muscular img, 
-.seccion-perder-peso img, 
+.seccion-masa-muscular img,
+.seccion-perder-peso img,
 .seccion-flexibilidad img {
     width: 400px;
     height: 250px;
     border-radius: 15px;
-    object-fit: cover;
+}
+
+.seccion-masa-muscular p,
+.seccion-perder-peso p,
+.seccion-flexibilidad p {
+    color: #ccc;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.seccion-masa-muscular h2,
+.seccion-perder-peso h2,
+.seccion-flexibilidad h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 /* Sección Contacto */
@@ -244,14 +240,15 @@ footer a:hover {
         font-size: 1rem;
     }
 
-    .seccion-masa-muscular, 
-    .seccion-perder-peso, 
+    .seccion-masa-muscular,
+    .seccion-perder-peso,
     .seccion-flexibilidad {
         flex-direction: column;
+        text-align: center;
     }
 
-    .seccion-masa-muscular img, 
-    .seccion-perder-peso img, 
+    .seccion-masa-muscular img,
+    .seccion-perder-peso img,
     .seccion-flexibilidad img {
         width: 100%;
         height: auto;
@@ -260,30 +257,5 @@ footer a:hover {
 
     .ejercicios-carousel {
         flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .btn-hero {
-        padding: 10px 20px;
-        font-size: 16px;
     }
 }

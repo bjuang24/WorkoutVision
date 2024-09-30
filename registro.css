@@ -1,0 +1,113 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('ruta/de/Registro (1).png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Formulario de Registro */
+.registro-form {
+    text-align: center;
+}
+
+.registro-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilos de los grupos de entrada */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #ccc;
+}
+
+/* Botón de registro */
+.btn-registrarse {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-registrarse:hover {
+    background-color: #d10000;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .registro-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .btn-registrarse {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
