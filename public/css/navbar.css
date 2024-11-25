@@ -1,0 +1,124 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.navbar-logo img{
+    height: 60px;
+    max-width: 100%;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.navbar-links a:hover{
+    color: red;
+}
+
+.btn-login {
+    background-color: red;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.btn-logout{
+    cursor: pointer;
+}
+
+.navbar-toggle{
+    display: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+/* Menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar el menú por defecto */
+    width: 100%;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de la navbar */
+    left: 0;
+    z-index: 100;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-menu .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dropdown-menu .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-menu .navbar-links a:hover {
+    color: red;
+}
+
+/* Mostrar el menú cuando se active */
+.dropdown-menu.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    /* Mostrar el logo en pantallas pequeñas */
+    .navbar-logo {
+        display: block;
+    }
+
+    /* Ocultar los enlaces de navegación en pantallas pequeñas */
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Botón hamburguesa visible solo en pantallas pequeñas */
+    .navbar-toggle {
+        display: block;
+    }
+
+    /* Ocultar el mensaje de bienvenida en pantallas pequeñas */
+    #login-message {
+        display: none;
+    }
+
+    /* El botón de login se mantiene visible en pantallas pequeñas */
+    .btn-login {
+        display: block;
+    }
+
+    /* Mostrar los enlaces cuando el menú hamburguesa se activa */
+    .navbar-links.active {
+        display: flex;
+    }
+}

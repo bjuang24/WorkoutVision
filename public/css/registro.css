@@ -7,13 +7,12 @@
 
 /* Estilo del cuerpo */
 body {
-    font-family: 'Arial', sans-serif;
-    background: url('ruta/de/Registro (1).png') no-repeat center center/cover;
+    font-family: 'Roboto', sans-serif;
+    background: url('../assets/img/fondoinicio.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
 /* Contenedor Principal */
